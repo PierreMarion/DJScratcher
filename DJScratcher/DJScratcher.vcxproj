@@ -39,8 +39,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>C:\Users\Kevin\Documents\FMOD Studio API Windows\api\studio\inc;C:\SFML-2.2\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\Kevin\Documents\FMOD Studio API Windows\api\studio\lib;C:\SFML-2.2\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\FMOD Studio API Windows\api\studio\inc;C:\SFML-2.2\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\FMOD Studio API Windows\api\studio\lib;C:\SFML-2.2\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <IncludePath>C:\Users\Kevin\Documents\FMOD Studio API Windows\api\studio\inc;C:\SFML-2.2\include;$(IncludePath)</IncludePath>

@@ -1,5 +1,6 @@
 #include "TGUI\TGUI.hpp"
 #include "fmod\fmod.hpp"
+#include "fmod\SimpleFMOD.h"
 #include <iostream>
 using namespace std;
 
@@ -7,8 +8,8 @@ int main()
 {
 	sf::RenderWindow window(sf::VideoMode(1000, 800), "Window");
 	tgui::Gui gui = tgui::Gui(window);
-
 	gui.setGlobalFont("TGUI/fonts/DejaVuSans.ttf");
+	SFMOD::Song chart();
 
 	tgui::ComboBox::Ptr songList(gui);
 	songList->load("TGUI/widgets/Black.conf");
