@@ -1,5 +1,14 @@
-﻿La génération a démarré 1/27/2015 11:23:58 AM.
+﻿La génération a démarré 2/3/2015 10:04:00 AM.
+     1>Projet "C:\Users\Kevin\documents\visual studio 2013\Projects\DJScratcher\DjScratcher\DjScratcher.vcxproj" sur le nœud 2 (Build cible(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\TGUI\include /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
+         main.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Kevin\documents\visual studio 2013\Projects\DJScratcher\Debug\DjScratcher.exe" /INCREMENTAL /NOLOGO /LIBPATH:C:\TGUI\lib "sfml-window-d.lib" "sfml-graphics-d.lib" "sfml-system-d.lib" "tgui-d.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib fmodex_vc.lib simpleFMODd.lib fmodstudio_vc.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Kevin\documents\visual studio 2013\Projects\DJScratcher\Debug\DjScratcher.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Kevin\documents\visual studio 2013\Projects\DJScratcher\Debug\DjScratcher.lib" /MACHINE:X86 Debug\main.obj
+         Debug\SoundSystem.obj
+         DjScratcher.vcxproj -> C:\Users\Kevin\documents\visual studio 2013\Projects\DJScratcher\Debug\DjScratcher.exe
+     1>Génération du projet "C:\Users\Kevin\documents\visual studio 2013\Projects\DJScratcher\DjScratcher\DjScratcher.vcxproj" terminée (Build cible(s)).
 
 La génération a réussi.
 
-Temps écoulé 00:00:00.04
+Temps écoulé 00:00:03.77
