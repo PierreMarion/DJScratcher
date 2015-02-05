@@ -1,56 +1,13 @@
 #include "TGUI\TGUI.hpp"
-#include "fmod\fmod.hpp"
-#include <windows.h>
-#include <stdio.h>
-#include <conio.h>
-#include <iostream>
-#include "fmod\fmod_codec.h"
-#include "fmod\fmod_common.h"
-#include "fmod\fmod_dsp.h"
-#include "fmod\fmod_dsp_effects.h"
-#include "fmod\fmod_output.h"
-#include "fmod\fmod_studio.h"
-#include "fmod\fmod_studio.hpp"
-#include "fmod\fmod_studio_common.h"
-
-
-using namespace std;
-//using namespace SFMOD;
+#include "Player.h"
 
 int main()
 {
-	//SoundSystem* sound = new SoundSystem();
-	FMOD::System     *system;
-	FMOD::Sound      *sound1;
-	FMOD::Channel    *channel = 0;
-	FMOD_RESULT      result;
-	unsigned int      version;
-	int numDrivers;
-
-	result = FMOD::System_Create(&system);
-	result = system->getVersion(&version);
-	result = system->getNumDrivers(&numDrivers);
-	result = system->init(100, FMOD_INIT_NORMAL, 0);
-
-	result = system->createSound("songs/Dragon_Roost_Island.mp3", FMOD_DEFAULT, 0, &sound1);
-	
-	//result = system->playSound(sound1, 0, false, &channel);
-
-	// Play the sound, with loop mode
-	//sound.playSound(soundSample, true);
-
-	// Do something meanwhile...
-
-	// Release the sound
-	//sound.releaseSound(soundSample);
-	//handle = new FSOUND_Sample_Load(0, "YourFileName", 0, 0, 0);
-	//FSOUND_PlaySound(0, handle);
-	//SimpleFMOD fmod;
-	//fmod.LoadSong("songs/Dragon_Roost_Island.mp3");
+ 
+	Player* player = new Player();
 	sf::RenderWindow window(sf::VideoMode(1000, 800), "DjScratcher");
 	tgui::Gui gui = tgui::Gui(window);
 	gui.setGlobalFont("TGUI/fonts/DejaVuSans.ttf");
-	//SFMOD::Song chart();
 
 	tgui::ComboBox::Ptr songList(gui);
 	songList->load("TGUI/widgets/Black.conf");
@@ -64,7 +21,7 @@ int main()
 	listeningLabel->setSize(200, 35);
 	listeningLabel->setPosition(100, 35);
 
-	
+
 
 	tgui::Label::Ptr bassLabel(gui);
 	bassLabel->load("TGUI/widgets/White.conf");
@@ -175,42 +132,14 @@ int main()
 		tgui::Callback callback;
 		while (gui.pollCallback(callback))
 		{
-			if (callback.id == 1 || 2 || 3)
+			if (callback.id == 1)
 			{
-				OPENFILENAME ofn;       // common dialog box structure
-				char szFile[260];       // buffer for file name
-				HWND hwnd = HWND();              // owner window
-				HANDLE hf;              // file handle
-
-				// Initialize OPENFILENAME
-				ZeroMemory(&ofn, sizeof(ofn));
-				ofn.lStructSize = sizeof(ofn);
-				ofn.hwndOwner = hwnd;
-				ofn.lpstrFile = szFile;
-				// Set lpstrFile[0] to '\0' so that GetOpenFileName does not 
-				// use the contents of szFile to initialize itself.
-				ofn.lpstrFile[0] = '\0';
-				ofn.nMaxFile = sizeof(szFile);
-				ofn.lpstrFilter = "All\0*.*\0Text\0*.TXT\0";
-				ofn.nFilterIndex = 1;
-				ofn.lpstrFileTitle = NULL;
-				ofn.nMaxFileTitle = 0;
-				ofn.lpstrInitialDir = NULL;
-				ofn.Flags = OFN_PATHMUSTEXIST | OFN_FILEMUSTEXIST;
-
-				// Display the Open dialog box. 
-
-				if (GetOpenFileName(&ofn) == TRUE)
-				{
-					hf = CreateFile(ofn.lpstrFile,
-						GENERIC_READ,
-						0,
-						(LPSECURITY_ATTRIBUTES)NULL,
-						OPEN_EXISTING,
-						FILE_ATTRIBUTE_NORMAL,
-						(HANDLE)NULL);
-					
-				}
+				player->Load();
+				player->Play();
+			}
+			if (callback.id == 3)
+			{
+				player->ChangeVolume(0.4, true);
 			}
 		}
 
