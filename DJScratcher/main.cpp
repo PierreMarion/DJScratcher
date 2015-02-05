@@ -139,7 +139,7 @@ int main()
 			}
 			if (callback.id == 3)
 			{
-				player->ChangeVolume(0.4, true);
+				player->ChangeVolume(0.4);
 			}
 		}
 
