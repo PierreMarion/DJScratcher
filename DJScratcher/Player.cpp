@@ -1,4 +1,6 @@
 #include "Player.h"
+#include <string>
+#include <stdlib.h>
 
 using namespace std;
 
@@ -91,7 +93,7 @@ void Player::FMODErrorCheck(FMOD_RESULT result)
     }
 }
 
-void Player::ChangeVolume(double nVolume)
+void Player::ChangeVolume(string nVolume)
 {
 
 	//HRESULT hr = NULL;
@@ -139,6 +141,6 @@ void Player::ChangeVolume(double nVolume)
 	//CoUninitialize();
 
 	//return FALSE;
-
-	this->channel->setVolume(nVolume);
+	float value = ::atof(nVolume.c_str());
+	this->channel->setVolume(value);
 }

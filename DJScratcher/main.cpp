@@ -91,6 +91,8 @@ int main()
 	volSlider->setValue(50);
 	volSlider->setSize(15, 300);
 	volSlider->setPosition(900, 400);
+	volSlider->bindCallback(tgui::Slider::ValueChanged);
+	volSlider->setCallbackId(5);
 
 
 	tgui::Button::Ptr playButton(gui);
@@ -137,9 +139,20 @@ int main()
 				player->Load();
 				player->Play();
 			}
-			if (callback.id == 3)
+			if (callback.id == 5)
 			{
-				player->ChangeVolume(0.4);
+				string value = std::to_string(volSlider->getValue());
+
+				if(value.length() == 1)
+				{
+					value.insert(0, "0");
+				}
+				if(value != "100")
+				{
+					value.insert(0, "0.");
+				}
+
+				player->ChangeVolume(value);
 			}
 		}
 

@@ -20,7 +20,7 @@ public:
 	FMOD::Channel* channel;
 	FMOD::Sound* currentSound;
 	float *spec;
-	void ChangeVolume(double nVolume /*bool bScalar*/);
+	void ChangeVolume(string nVolume /*bool bScalar*/);
 
 private:
 	FMOD::System *FMODsys;
