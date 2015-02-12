@@ -39,8 +39,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>C:\SFML-2.2\include;C:\FMOD Programmers API Windows\api\inc;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\SFML-2.2\lib;C:\FMOD Programmers API Windows\api\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\boost_1_54_0;C:\id3lib\include;C:\SFML-2.2\include;C:\FMOD Programmers API Windows\api\inc;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\boost_1_54_0\stage\lib;C:\id3lib\lib;C:\SFML-2.2\lib;C:\FMOD Programmers API Windows\api\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <IncludePath>C:\SFML-2.2\include;C:\FMOD Programmers API Windows\api\inc;$(IncludePath)</IncludePath>
@@ -51,11 +51,13 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <AdditionalIncludeDirectories>C:\TGUI\include;C:\SFML-2.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>sfml-window-d.lib;sfml-system-d.lib;sfml-graphics-d.lib;tgui-d.lib;fmodex_vc.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\SFML-2.2\lib;C:\TGUI\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-window-d.lib;sfml-system-d.lib;sfml-graphics-d.lib;tgui-d.lib;fmodex_vc.lib;id3lib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\boost_1_54_0\stage\lib;C:\SFML-2.2\lib;C:\TGUI\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <TargetMachine>MachineX86</TargetMachine>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -75,11 +77,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="FileManagement.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="Song.cpp" />
+    <ClCompile Include="UIBuilder.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="FileManagement.h" />
     <ClInclude Include="Player.h" />
+    <ClInclude Include="Song.h" />
+    <ClInclude Include="UIBuilder.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
