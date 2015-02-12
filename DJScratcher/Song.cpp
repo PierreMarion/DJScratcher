@@ -1,8 +1,15 @@
 #include "Song.h"
+/**
+Class containing the logic behind what is, for our project, a song.
+*/
 
-//Tout viens de Ferland.
 
-
+/**
+Constructor of a song
+param path Access path to the song, in string format
+param FMODSys FMOD::System to which the song will be linked
+param sfx boolean checking if the new song is just an sound effect or a whole song
+*/
 Song::Song(std::string path, FMOD::System* FMODsys, bool sfx)
 {
 	system = FMODsys;
@@ -15,7 +22,9 @@ Song::Song(std::string path, FMOD::System* FMODsys, bool sfx)
 	Load();
 }
 
-
+/**
+Destructor of a song
+*/
 Song::~Song(void)
 {
 	if(!this->sfx)
@@ -23,7 +32,9 @@ Song::~Song(void)
 		this->sound->release();
 	}
 }
-
+/**
+Function allowing the program to get various informations on the song
+*/
 void Song::SetSongInfo()
 {
 	this->songFrame = songTag->Find(ID3FID_BAND);
@@ -36,7 +47,9 @@ void Song::SetSongInfo()
     songFrame->Field(ID3FN_TEXT).Get(album, 1024);
 	this->songAlbum = album;
 }
-
+/**
+Function sets the song as the currentSong on the linked FMOD::System 
+*/
 void Song::Load()
 {
 	FMOD_RESULT result;
@@ -49,21 +62,26 @@ void Song::Load()
 	}
 }
 
-void Song::Play()
-{
-	system->playSound(FMOD_CHANNEL_FREE, sound, false, &this->channel);
-}
-
+/**
+function returning the FMOD::Sound of the song
+return sound the song's FMOD::Sound
+*/
 FMOD::Sound* Song::GetSound()
 {
 	return this->sound;
 }
-
+/**
+function returning the artist of the song
+return songArtist the song's artist
+*/
 std::string Song::getArtist()
 {
 	return this->songArtist;
 }
-
+/**
+function returning the name of the album of the song
+return sound the song's album name
+*/
 std::string Song::getAlbum()
 {
 	return this->songAlbum;

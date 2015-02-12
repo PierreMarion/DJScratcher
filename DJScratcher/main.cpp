@@ -98,10 +98,10 @@ int main()
 	uiBuilder->createSlider(trebbleSlider, "White", 100, 400, 300, 5, 100);
 
 	tgui::Slider::Ptr speedSlider(gui);
-	uiBuilder->createSlider(speedSlider, "White", 100, 500, 25, 5, 10);
+	uiBuilder->createSlider(speedSlider, "White", 100, 500, 15, 5, 10);
 
 	tgui::Slider::Ptr pitchSlider(gui);
-	uiBuilder->createSlider(pitchSlider, "White", 100, 600, 40, 5, 10);
+	uiBuilder->createSlider(pitchSlider, "White", 100, 600, 20, 5, 10);
 
 	string fileNames = fileManage->getFileNames("songs/");
 	for(int i = 0; i < fileNames.length(); i++) 

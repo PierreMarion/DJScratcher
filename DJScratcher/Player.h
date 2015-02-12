@@ -17,7 +17,12 @@ public:
 	void Pause(bool pause);
 	std::string getArtist();
 	std::string getAlbum();
-
+	void ChangeVolume(string nVolume);
+	void BassEqModification(double bassFrequency);
+	void MediumEqModification(double mediumFrequency);
+	void TrebbleEqModification(double trebbleFrequency);
+	void PitchModification(double pitchFrequency);
+	void SpeedModification(float speedFrequency);
 	void SetSampleSize(int newSize);
 	FMOD::System* GetFmodSys();
 	void AddChannelToMaster(FMOD::Channel* newChannel);
@@ -25,20 +30,13 @@ public:
 	FMOD::Channel* channel;
 	FMOD::Sound* currentSound;
 	float *spec;
-	void ChangeVolume(string nVolume);
-	void BassEqModification(double bassFrequency);
-	void MediumEqModification(double mediumFrequency);
-	void TrebbleEqModification(double trebbleFrequency);
-	void PitchModification(double pitchFrequency);
-	void SpeedModification(float speedFrequency);
+	
 
 private:
 	FMOD::System *FMODsys;
-	FMOD_RESULT result;
 	FMOD::ChannelGroup* masterSound;
 	int sampleSize;
 	bool change;
-	void frequencyAnalysis();
 	float frequency;
 
 	std::string songArtist;

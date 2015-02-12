@@ -14,7 +14,6 @@ class Song
 		Song(std::string path, FMOD::System* FMODsys, bool sfx);
 		~Song(void);
 
-		void Play();
 		void Load();
 		void SetSongInfo();
 
