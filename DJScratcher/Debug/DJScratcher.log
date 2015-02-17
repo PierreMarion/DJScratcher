@@ -1,23 +1,35 @@
-﻿Build started 2015-02-12 15:34:29.
-     1>Project "C:\Cégep\Nouvelle Techno\DJScratcher\DjScratcher\DjScratcher\DjScratcher.vcxproj" on node 2 (Build target(s)).
+﻿La génération a démarré 2/17/2015 9:35:41 AM.
+     1>Projet "C:\Users\Kevin\Documents\Visual Studio 2012\Projects\DJScratcher\DjScratcher\DjScratcher.vcxproj" sur le nœud 2 (Rebuild cible(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /IC:\TGUI\include /I"C:\SFML-2.2\include" /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Player.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /IC:\TGUI\include /I"C:\SFML-2.2\include" /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt FileManagement.cpp main.cpp Player.cpp Song.cpp UIBuilder.cpp
+         UIBuilder.cpp
+     1>c:\users\kevin\documents\visual studio 2012\projects\djscratcher\djscratcher\uibuilder.cpp(34): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+     1>c:\users\kevin\documents\visual studio 2012\projects\djscratcher\djscratcher\uibuilder.cpp(57): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+     1>c:\users\kevin\documents\visual studio 2012\projects\djscratcher\djscratcher\uibuilder.cpp(74): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+     1>c:\users\kevin\documents\visual studio 2012\projects\djscratcher\djscratcher\uibuilder.cpp(86): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+         Song.cpp
          Player.cpp
-     1>c:\cégep\nouvelle techno\djscratcher\djscratcher\djscratcher\player.cpp(24): warning C4305: 'argument' : truncation from 'double' to 'float'
-     1>c:\cégep\nouvelle techno\djscratcher\djscratcher\djscratcher\player.cpp(128): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>c:\cégep\nouvelle techno\djscratcher\djscratcher\djscratcher\player.cpp(136): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>c:\cégep\nouvelle techno\djscratcher\djscratcher\djscratcher\player.cpp(144): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>c:\cégep\nouvelle techno\djscratcher\djscratcher\djscratcher\player.cpp(160): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>c:\cégep\nouvelle techno\djscratcher\djscratcher\djscratcher\player.cpp(168): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\kevin\documents\visual studio 2012\projects\djscratcher\djscratcher\player.cpp(24): warning C4305: 'argument' : troncation de 'double' à 'float'
+     1>c:\users\kevin\documents\visual studio 2012\projects\djscratcher\djscratcher\player.cpp(128): warning C4244: 'argument' : conversion de 'double' en 'float', perte possible de données
+     1>c:\users\kevin\documents\visual studio 2012\projects\djscratcher\djscratcher\player.cpp(136): warning C4244: 'argument' : conversion de 'double' en 'float', perte possible de données
+     1>c:\users\kevin\documents\visual studio 2012\projects\djscratcher\djscratcher\player.cpp(144): warning C4244: 'argument' : conversion de 'double' en 'float', perte possible de données
+     1>c:\users\kevin\documents\visual studio 2012\projects\djscratcher\djscratcher\player.cpp(160): warning C4244: 'argument' : conversion de 'double' en 'float', perte possible de données
+     1>c:\users\kevin\documents\visual studio 2012\projects\djscratcher\djscratcher\player.cpp(168): warning C4244: 'initialisation' : conversion de 'double' en 'float', perte possible de données
+         main.cpp
+     1>c:\users\kevin\documents\visual studio 2012\projects\djscratcher\djscratcher\main.cpp(107): warning C4018: '<' : incompatibilité signed/unsigned
+     1>c:\users\kevin\documents\visual studio 2012\projects\djscratcher\djscratcher\main.cpp(238): warning C4018: '<' : incompatibilité signed/unsigned
+     1>c:\users\kevin\documents\visual studio 2012\projects\djscratcher\djscratcher\main.cpp(315): warning C4244: 'argument' : conversion de 'double' en 'float', perte possible de données
+         FileManagement.cpp
+         Génération de code en cours...
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Cégep\Nouvelle Techno\DJScratcher\DjScratcher\Debug\DjScratcher.exe" /INCREMENTAL /NOLOGO /LIBPATH:C:\boost_1_54_0\stage\lib /LIBPATH:"C:\SFML-2.2\lib" /LIBPATH:C:\TGUI\lib "sfml-window-d.lib" "sfml-system-d.lib" "sfml-graphics-d.lib" "tgui-d.lib" fmodex_vc.lib id3lib.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Cégep\Nouvelle Techno\DJScratcher\DjScratcher\Debug\DjScratcher.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Cégep\Nouvelle Techno\DJScratcher\DjScratcher\Debug\DjScratcher.lib" /MACHINE:X86 Debug\FileManagement.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Kevin\Documents\Visual Studio 2012\Projects\DJScratcher\Debug\DjScratcher.exe" /INCREMENTAL /NOLOGO /LIBPATH:C:\boost_1_54_0\stage\lib /LIBPATH:"C:\SFML-2.2\lib" /LIBPATH:C:\TGUI\lib "sfml-window-d.lib" "sfml-system-d.lib" "sfml-graphics-d.lib" "tgui-d.lib" fmodex_vc.lib id3lib.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Kevin\Documents\Visual Studio 2012\Projects\DJScratcher\Debug\DjScratcher.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Kevin\Documents\Visual Studio 2012\Projects\DJScratcher\Debug\DjScratcher.lib" /MACHINE:X86 Debug\FileManagement.obj
          Debug\main.obj
          Debug\Player.obj
          Debug\Song.obj
          Debug\UIBuilder.obj
-         DjScratcher.vcxproj -> C:\Cégep\Nouvelle Techno\DJScratcher\DjScratcher\Debug\DjScratcher.exe
-     1>Done Building Project "C:\Cégep\Nouvelle Techno\DJScratcher\DjScratcher\DjScratcher\DjScratcher.vcxproj" (Build target(s)).
+         DjScratcher.vcxproj -> C:\Users\Kevin\Documents\Visual Studio 2012\Projects\DJScratcher\Debug\DjScratcher.exe
+     1>Génération du projet "C:\Users\Kevin\Documents\Visual Studio 2012\Projects\DJScratcher\DjScratcher\DjScratcher.vcxproj" terminée (Rebuild cible(s)).
 
-Build succeeded.
+La génération a réussi.
 
-Time Elapsed 00:00:03.66
+Temps écoulé 00:00:12.62

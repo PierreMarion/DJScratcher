@@ -55,7 +55,7 @@ param songName Name of the song you want to load
 void Player::Load(string songName)
 {
 	this->change = false;
-	songName.insert(0, "songs/");
+	songName.insert(0, "C:/Musique/");
 	Song* newSong = new Song(songName, this->FMODsys, true);
 	this->currentSound = newSong->GetSound();
 	this->songArtist = newSong->getArtist();

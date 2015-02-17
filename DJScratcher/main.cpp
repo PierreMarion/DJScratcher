@@ -14,7 +14,7 @@ int main()
 	UIBuilder* uiBuilder = new UIBuilder();
 	Player* player = new Player();
 
-	int fileCount = fileManage->getFileCount("songs/");
+	int fileCount = fileManage->getFileCount("C:/Musique/");
 
 	sf::RenderWindow window(sf::VideoMode(1000, 800), "DjScratcher");
 	tgui::Gui gui = tgui::Gui(window);
@@ -103,7 +103,7 @@ int main()
 	tgui::Slider::Ptr pitchSlider(gui);
 	uiBuilder->createSlider(pitchSlider, "White", 100, 600, 20, 5, 10);
 
-	string fileNames = fileManage->getFileNames("songs/");
+	string fileNames = fileManage->getFileNames("C:/Musique/");
 	for(int i = 0; i < fileNames.length(); i++) 
 	{
 		int songSeperatorIndex = fileNames.find(",");
@@ -225,15 +225,15 @@ int main()
 			}
 			if (callback.id == 5) //Update 
 			{
-				string fileNames = fileManage->getFileNames("songs/");
+				string fileNames = fileManage->getFileNames("C:/Musique/");
 
-				if(fileManage->getFileCount("songs/") < fileCount)
+				if(fileManage->getFileCount("C:/Musique/") < fileCount)
 				{
 					songList->removeAllItems();
 					fileCount = 0;
 				}
 
-				if(fileManage->getFileCount("songs/") > fileCount)
+				if(fileManage->getFileCount("C:/Musique/") > fileCount)
 				{
 					for(int i = 0; i < fileNames.length(); i++) 
 					{
@@ -249,7 +249,7 @@ int main()
 						fileNames.erase(0, songSeperatorIndex + 2);
 					}
 
-					fileCount = fileManage->getFileCount("songs/");
+					fileCount = fileManage->getFileCount("C:/Musique/");
 				}
 			}
 
